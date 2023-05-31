@@ -5,6 +5,8 @@ $(function () {
         autoPlay: true,
         showControls: false,
         playOnlyIfVisible: true,
+        quality: 'highres',
+        mute: true,
     });
     $('.main_vi .pause').on('click', function () {
         vdo.YTPPause();
