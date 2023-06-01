@@ -28,11 +28,10 @@ $(function () {
         $('.story_slide').slick('slickNext');
     });
 
-    // ?
-    $('.main_story ul li').on('click', function (e) {
+    $('.main_story .menu li').on('click', function (e) {
         e.preventDefault();
         const idx = $(this).index();
-        $('.stroy_slide').slick('slickGoTo', idx);
+        $('.story_slide').slick('slickGoTo', idx);
     });
 
     $(window).on('scroll', function () {
