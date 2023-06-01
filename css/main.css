@@ -9,8 +9,14 @@
     padding: 0 15px;
 }
 
+.inner h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
 .sec {
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
 .header {
@@ -18,16 +24,22 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(#000, 60%, transparent);
     z-index: 999;
+
 }
 
-.header .inner {
+.header.on {
+    background: #333;
+    transition: 1s;
+}
+
+.header .content {
     display: flex;
-    line-height: 70px;
+    line-height: 80px;
 }
 
-.header .inner img {
+.header .content img {
     height: 40px;
 }
 
@@ -38,7 +50,7 @@
 .header .gnb>ul {
     display: flex;
     gap: 30px;
-    margin: 0 10px 0 0;
+    margin: 0 20px 0 0;
 }
 
 .header .gnb>ul>li>a {
@@ -48,6 +60,11 @@
 
 .header .gnb>ul>li>a:hover {
     color: #00a5e5;
+}
+
+.header .btn i {
+    color: #fff;
+    cursor: pointer;
 }
 
 .main_vi {
@@ -66,8 +83,11 @@
 }
 
 .main_vi .slogan strong {
+    display: block;
     font-size: 100px;
     font-weight: 900;
+    width: 300px;
+    margin: 0 0 8px -3px;
 }
 
 .main_vi .slogan p {
@@ -81,7 +101,7 @@
 
 .main_vi .ctr {
     position: absolute;
-    top: 440px;
+    top: 450px;
     left: 0;
     margin: 0 0 0 15px;
     transform: translate(0, 50%);
@@ -103,18 +123,311 @@
     gap: 30px;
 }
 
+.main_con .con_box figure {
+    flex: 1;
+}
+
+.main_con .img_box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+}
+
+.main_con .img_box img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: 0.8s;
+}
+
+.main_con .txt_box {
+    text-align: center;
+    margin: 20px 0;
+}
 
 .main_con .txt_box strong {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .main_con .txt_box p {
     font-size: 15px;
+    font-weight: 300;
+}
+
+.main_con .img_box .btn {
+    display: none;
+}
+
+.main_con .img_box:hover img {
+    opacity: 0.2;
+}
+
+/* 스페셜 스토리 슬라이드 */
+.main_story {
+    position: relative;
+}
+
+.main_story .content {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(0, -50%);
+    margin: 0 0 0 -600px;
+    color: #fff;
+    z-index: 990;
+}
+
+
+.main_story ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main_story ul li a {
+    padding: 6px 0;
+    border-bottom: 2px solid #fff;
+    transition: 1s;
+}
+
+.main_story ul li:hover a {
+    border-bottom: 2px solid #00a5e5;
+}
+
+.main_story figure {
+    height: 600px;
+}
+
+.main_story .story_slide .sl01 {
+    background: url(../images/slide01.jpg) no-repeat center center/cover;
+}
+
+.main_story .story_slide .sl02 {
+    background: url(../images/slide02.jpg) no-repeat center center/cover;
+}
+
+.main_story .story_slide .sl03 {
+    background: url(../images/slide03.jpg) no-repeat center center/cover;
+}
+
+.main_story .story_slide .sl04 {
+    background: url(../images/slide04.jpg) no-repeat center center/cover;
+}
+
+.main_story .story_slide .sl05 {
+    background: url(../images/slide05.jpg) no-repeat center center/cover;
+}
+
+.main_story .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.main_story .slogan strong {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+.main_story .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+    transform: translate(-50%, 30px);
+    padding: 10px 50px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    cursor: pointer;
     font-weight: 500;
 }
+
+.main_story .btn:hover {
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.main_story .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30px);
+    max-width: 1800px;
+    width: 100%;
+}
+
+.main_story .arrows i {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 80px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.main_story .arrows i:hover {
+    color: #fff;
+}
+
+.main_story .arrows .left {
+    position: absolute;
+    left: 0;
+}
+
+.main_story .arrows .right {
+    position: absolute;
+    right: 0;
+}
+
+/* 아이템박스 */
+.main_itm .itm_box {
+    display: flex;
+    gap: 30px;
+}
+
+.main_itm .left {
+    position: relative;
+}
+
+.main_itm .left .img_box {
+    height: 765px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.main_itm .left img {
+    transform: scale(1.1);
+}
+
+.main_itm .left .txt_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main_itm .left .txt_box strong {
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0 0 30px 0;
+}
+
+.main_itm .left .txt_box p {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.main_itm .txt_box_w {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px;
+}
+
+.main_itm .txt_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px;
+}
+
+.main_itm .txt_box strong {
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0 0 30px 0;
+}
+
+.main_itm .txt_box p {
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.main_itm .right ul li {
+    position: relative;
+}
+
+.main_itm .right ul {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.main_itm .right img {
+    border-radius: 10px;
+}
+
 
 .footer {
     height: 200px;
     background: #333;
+}
+
+.footer .content {
+    padding: 40px 0 0 0;
+}
+
+.footer ul {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 20px 0;
+}
+
+.footer ul li {
+    position: relative;
+    color: #999;
+    font-size: 14px;
+}
+
+.footer ul li~li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: 1px;
+    height: 12px;
+    background: #444;
+}
+
+.footer .st {
+    font-weight: 700;
+}
+
+.footer address {
+    position: relative;
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.footer address::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #444;
+}
+
+
+.to_top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.to_top i {
+    padding: 10px;
+    background: #ddd;
+    border-radius: 5px;
 }
