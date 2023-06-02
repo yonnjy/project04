@@ -195,13 +195,13 @@
 }
 
 .main_con .img_box:hover::after {
-    content: "\e940";
+    content: "\e907";
     font-family: xeicon;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 40px;
+    padding: 10px;
     font-size: 22px;
     border-radius: 10px;
     color: #fff;
@@ -243,6 +243,21 @@
 .main_story ul {
     display: flex;
     gap: 20px;
+}
+
+.main_story ul li {
+    position: relative;
+}
+
+.main_story ul li:hover::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00a5e5;
 }
 
 .main_story figure {
@@ -311,7 +326,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -30px);
-    max-width: 1400px;
+    max-width: 1800px;
     width: 100%;
 }
 
