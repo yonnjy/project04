@@ -138,7 +138,7 @@
     right: 0;
     width: 2px;
     height: 10px;
-    background: #333;
+    background: #00a5e5;
     border-radius: 1px;
     animation: wheel 1s infinite;
 }
@@ -375,7 +375,7 @@
 }
 
 .main_itm .left:hover img {
-    filter: brightness(10%);
+    transform: scale(1.1);
 }
 
 .main_itm img {
@@ -401,7 +401,7 @@
 
 .main_itm .left .txt_box p {
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 .main_itm .right {
@@ -446,13 +446,13 @@
 .main_itm .right .txt_w strong {
     display: block;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 0 20px 0;
 }
 
 .main_itm .right .txt_w p {
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 300;
 }
 
@@ -466,13 +466,13 @@
 .main_itm .right .txt_b strong {
     display: block;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 0 20px 0;
 }
 
 .main_itm .right .txt_b p {
     font-size: 20px;
-    line-height: 1.3;
+    line-height: 1.2;
 }
 
 
@@ -483,7 +483,7 @@
 }
 
 .footer .content {
-    padding: 40px 0 0 0;
+    padding: 40px 15px 0 15px;
 }
 
 .footer ul {
